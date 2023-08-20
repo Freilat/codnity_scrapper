@@ -21,3 +21,18 @@ Bonus points: Docker usage, Unit tests.
 ## Setup
 
 
+git clone git@github.com:Freilat/yScrapper.git
+
+cp .env.example .env
+
+docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php82-composer:latest composer install --ignore-platform-reqs
+
+
+sail down -v && sail build --no-cache && sail up
+
+sail php artisan migrate
+sail php artisan db:seed
+
+sail npm install
+sail npm run dev
+

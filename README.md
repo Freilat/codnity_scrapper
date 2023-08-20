@@ -21,6 +21,8 @@ Bonus points: Docker usage, Unit tests.
 ## Setup
 
 
+To set up this project:
+```
 git clone git@github.com:Freilat/yScrapper.git
 
 cp .env.example .env
@@ -30,9 +32,19 @@ docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/htm
 
 sail down -v && sail build --no-cache && sail up
 
+sail npm install
+
 sail php artisan migrate
 sail php artisan db:seed
 
-sail npm install
 sail npm run dev
+```
+
+
+
+To run scraper:
+```
+sail php artisan scrapper:run
+```
+
 

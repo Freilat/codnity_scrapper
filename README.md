@@ -1,6 +1,6 @@
-# codnity_scrapper
+# yScrapper
 
-##Laravel / Vue.js task
+## Laravel / Vue.js task
 
 ### Create a scraper that reads data from https://news.ycombinator.com/ (title, link, points, date created)
 * Store data to a local database (Postgres or MySQL)

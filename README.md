@@ -47,4 +47,6 @@ To run scraper:
 sail php artisan scrapper:run
 ```
 
+user: test@example.com
+psw: password
 

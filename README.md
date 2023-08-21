@@ -21,32 +21,49 @@ Bonus points: Docker usage, Unit tests.
 ## Setup
 
 
-To set up this project:
-```
-git clone git@github.com:Freilat/yScrapper.git
+To set up this project You should install [Docker](https://www.docker.com/products/docker-desktop/) and then clone [this](https://github.com/Freilat/yScrapper) project. After that You cd into project and continue with comands below. 
 
+```
 cp .env.example .env
 
+```
+```
 docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php82-composer:latest composer install --ignore-platform-reqs
 
+```
+```
 
 sail down -v && sail build --no-cache && sail up
 
+```
+```
 sail npm install
 
+```
+```
 sail php artisan migrate
+```
+```
 sail php artisan db:seed
 
+```
+```
 sail npm run dev
 ```
 
 
 
-To run scraper:
+### To run scraper:
 ```
 sail php artisan scrapper:run
 ```
+### To log in You can use
+user: 
+```
+test@example.com
+```
+password:
 
-user: test@example.com
-psw: password
-
+```
+password
+```
